@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <title>Service Worker Demo Add To Home Screen</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="manifest" href="scripts/manifest.json">
+</head>
+
+<body>
+
+  <header>
+    <h1>This is demo add to home screen</h1>
+  </header>
+
+  <main>
+    <p></p>
+  </main>
+
+  <script>
+    window.firebaseConfig = { messagingSenderId : '459244921587' };
+    window.vapidPublicKey = 'BBAh0_q_gkmbwJL40itoIIu1cGKeliZkS9ET2eZGBjkOjQ7yKDiQVn0LG6_2CuNZurTG-El3XJORaxN1Okw5hgw';
+</script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase-messaging.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
