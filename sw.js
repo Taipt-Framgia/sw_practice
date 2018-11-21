@@ -22,7 +22,7 @@ self.addEventListener('push', function(event) {
         fetch(rawData.data.received_api, { mode: 'no-cors' });
     }
 
-    return self.registration.showNotification(notificationTitle, notificationOptions);
+    return event.waitUntil(self.registration.showNotification(notificationTitle, notificationOptions));
 });
 
 self.addEventListener('notificationclick', function(event) {
