@@ -11,6 +11,7 @@ if ('serviceWorker' in navigator) {
             messaging.requestPermission().then(function () {
                 messaging.getToken().then(function (currentToken) {
                     // TODO : Hanle Token
+                    console.log('Token : ' + currentToken);
                 }).catch(function (err) {
                     console.log(err);
                 });
