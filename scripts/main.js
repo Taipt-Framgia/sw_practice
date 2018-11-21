@@ -6,7 +6,7 @@ messaging.usePublicVapidKey(window.vapidPublicKey);
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register(window.NotificationConfig.sw_url).then(function(swReg) {
+        navigator.serviceWorker.register('sw.js').then(function(swReg) {
             messaging.useServiceWorker(swReg);
             messaging.requestPermission().then(function () {
                 messaging.getToken().then(function (currentToken) {
