@@ -11,13 +11,8 @@ if ('serviceWorker' in navigator) {
             messaging.requestPermission().then(function () {
                 messaging.getToken().then(function (currentToken) {
                     // TODO : Hanle Token
-                    var confirm = confirm("Copy Token to clipboard : " + currentToken);
-
-                    if (confirm == true) {
-                        document.execCommand("copy");
-                    }
-
-
+                    prompt('Select All and copy Token:', currentToken);
+                  
                 }).catch(function (err) {
                     console.log(err);
                 });
