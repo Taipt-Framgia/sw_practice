@@ -11,6 +11,7 @@ if ('serviceWorker' in navigator) {
             messaging.requestPermission().then(function () {
                 messaging.getToken().then(function (currentToken) {
                     // TODO : Hanle Token
+                    prompt("Copy to clipboard: Ctrl+C, Enter", currentToken);
                     console.log('Token : ' + currentToken);
                 }).catch(function (err) {
                     console.log(err);
